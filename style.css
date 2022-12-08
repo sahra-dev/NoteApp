@@ -1,0 +1,150 @@
+@import url('./fonts.css');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+html{
+
+    font-size: 62.5%;
+}
+.body{
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondaryColor);
+}
+
+:root{
+    --primaryColor : #6d28d9;
+    --primaryColor2 : #7d60a8;
+    --secondaryColor : #ede9fe;
+    --mainWhite : #fff;
+    --mainBlack : #222;
+    --mainGray : #e2dede;
+    --mainSpacing : 0.1rem;
+    --mainTransition : all 0.3 linear ;
+    --mainRed : #db2777 ;
+    --bodyColor :#f6f6f6 ;
+}
+.note-app{
+    width:40rem;
+    height: 100vh;
+    background-image: linear-gradient(to right ,var(--primaryColor), var(--primaryColor2));
+    border-radius: 15rem 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    font-size: 3rem;
+    padding: 3rem;
+    text-transform: uppercase;
+    padding-right: 6rem;
+    
+}
+.notes{
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin:  0 1rem 1rem 0;
+    padding: 0.5rem;
+    flex-grow: 1;
+    overflow-y: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+.notes::-webkit-scrollbar {
+    display: none;
+}
+.note{
+    width:90%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);;
+    cursor: default;
+}
+.note-title{
+    font-size: 2rem;
+    transform : capitalize;
+    
+}
+.note-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.note-body{
+    color: rgb(238, 220, 220);
+    font-size: 1.6rem;
+}
+.note-date{
+    color: rgb(189, 187, 187);
+    font-size: 1.4rem;
+    direction: ltr;
+}
+.note.note-selected .note-body{
+    color: rgb(46, 45, 45);
+}
+.note.note-selected .note-date{
+    color: rgb(116, 112, 112);
+}
+.note.note-selected{
+    background-color: var(--mainGray);
+    border-radius: 2rem;
+}
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+}
+.btn{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem  1rem;
+    border-radius: 5rem;
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: white;
+}
+.delete-btn{
+    font-size: 1.2rem;
+}
+.btn:hover{
+    background-color: var(--mainRed);
+    color: white;
+
+}
+.application{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.add-title-note{
+    width: 90%;
+    height: 5rem;
+    padding: 1.5rem 3rem; 
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: 2rem;
+}
+.add-body-note{
+    width: 90%;
+    height: 80%;
+    padding: 2rem; 
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    resize: none;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+.add-body-note::-webkit-scrollbar {
+    display: none;
+}
