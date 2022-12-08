@@ -21,8 +21,8 @@ const notes =[
 
 export default class NoteAPI {
     static getAllNotes(){
-        // const savedNotes =JSON.parse(localStorage.getItem('note-app')) || [] ;
-        const savedNotes = notes || [] ;
+        const savedNotes =JSON.parse(localStorage.getItem('note-app')) || [] ;
+        // const savedNotes = notes || [] ;
         return savedNotes.sort((a,b) =>{
             return new Date(a.updated) > new Date(b.updated) ? -1 :1;
         })
